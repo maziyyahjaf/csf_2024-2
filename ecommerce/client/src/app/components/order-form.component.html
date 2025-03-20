@@ -1,0 +1,16 @@
+<pre>{{ items$ | async | json }}</pre>
+<pre>{{ uniqueItems$ | async | json }}</pre>
+
+<!-- @for(item of items$ | async; track item.prodId) {
+  {{item.name}} {{item.price}} {{item.prodId}} {{item.quantity}}
+}
+<p> unique items: {{uniqueItems$ | async}} </p> -->
+
+<form [formGroup]="form" (submit)="addToCart()">
+  <div>
+    Quantity: <input type="number" value="1" min="1" formControlName="quantity">
+  </div>
+  <div>
+    <button type="submit" [disabled]="form.invalid">Add</button>
+  </div>
+</form>

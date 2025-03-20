@@ -1,0 +1,6 @@
+TODO Task 1
+
+Write the command to import products.csv into Mongo in this file
+mongoimport --db=emart2 --collection=products --file=products.csv --headerline --type=csv
+
+mongoimport --db=emart2 --collection=products --file=products.csv --headerline --type=csv --uri="mongodb://mongo:hJeqDAxIxHFVIcTBYSAFnCNvueTAbVPh@yamanote.proxy.rlwy.net:57857/?authSource=admin"
