@@ -63,8 +63,9 @@ export class ConfirmCheckoutComponent implements OnInit {
         // how to extract the order id?
         const orderId = data.orderId;
         alert(`Order created successfully! Order ID: ${orderId}`);
+        this.cartStore.resetCart();
         this.router.navigate(['categories']);
-        this.cartStore.resetCart;
+        
 
     
       },
